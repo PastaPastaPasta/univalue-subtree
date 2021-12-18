@@ -54,7 +54,7 @@ public:
     bool setNumStr(const std::string& val);
     bool setInt(uint64_t val);
     bool setInt(int64_t val);
-    bool setInt(int val_) { return setInt((int64_t)val_); }
+    bool setInt(int val_) { return setInt(int64_t(val_)); }
     bool setFloat(double val);
     bool setStr(const std::string& val);
     bool setArray();

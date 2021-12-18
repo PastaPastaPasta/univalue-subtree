@@ -187,7 +187,7 @@ enum jtokentype getJsonToken(std::string& tokenVal, unsigned int& consumed,
         JSONUTF8StringFilter writer(valStr);
 
         while (true) {
-            if (raw >= end || (unsigned char)*raw < 0x20)
+            if (raw >= end || (unsigned char)(*raw) < 0x20)
                 return JTOK_ERR;
 
             else if (*raw == '\\') {
